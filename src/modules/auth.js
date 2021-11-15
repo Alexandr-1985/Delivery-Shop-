@@ -7,6 +7,19 @@ const logInForm = document.getElementById("logInForm");
 const inputLogin = document.getElementById("login");
 const inputPassword = document.getElementById("password");
 
+const TestLogin = (login) => {
+    if(/^[a-zA-Z1-9]+$/.test(login)=== false){
+        alert('В логине должны бытьтолько латинские буквы');
+    }
+    if(login.length < 4 || login.length > 20) {
+        alert('В лошине должно быть от 4 до 20 символов');
+    }
+    if(parsentInt(login.substr(0, 1))) {
+        alert('Логины должны начинаться с буквы'); return fasle;
+    }
+    return true;
+}
+
 //modalAuth.style.color = "red";
 
 //ф-я для авторизации
