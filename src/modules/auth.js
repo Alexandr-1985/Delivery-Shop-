@@ -1,4 +1,5 @@
-const buttonAuth = document.querySelector(".button-auth");
+const auth = () => {
+    const buttonAuth = document.querySelector(".button-auth");
 const modalAuth = document.querySelector(".modal-auth");
 const closeAuth = document.querySelector(".close-auth");
 const buttonOut = document.querySelector(".button-out");
@@ -8,14 +9,15 @@ const inputLogin = document.getElementById("login");
 const inputPassword = document.getElementById("password");
 
 const TestLogin = (login) => {
-    if(/^[a-zA-Z1-9]+$/.test(login)=== false){
-        alert('В логине должны бытьтолько латинские буквы');
+    if (/^[a-zA-Z1-9]+$/.test(login) === false) {
+        alert('В логине должны быть только латинские буквы');
     }
-    if(login.length < 4 || login.length > 20) {
+    if (login.length < 4 || login.length > 20) {
         alert('В лошине должно быть от 4 до 20 символов');
     }
-    if(parsentInt(login.substr(0, 1))) {
-        alert('Логины должны начинаться с буквы'); return fasle;
+    if (parsentInt(login.substr(0, 1))) {
+        alert('Логины должны начинаться с буквы');
+        return fasle;
     }
     return true;
 }
@@ -83,3 +85,6 @@ logInForm.addEventListener("submit", (event) => {
 if (localStorage.getItem("user")) {
     login(JSON.parse(localStorage.getItem("user")));
 }
+}
+
+export default auth;

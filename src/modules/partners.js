@@ -1,4 +1,5 @@
-//создаем контейнер из карточке в index.html
+const partners = () => {
+  //создаем контейнер из карточке в index.html
 const cardsRestaurants = document.createElement("cards-restaurants");
 
 /*
@@ -96,7 +97,10 @@ fetch("https://go-test-shop-default-rtdb.firebaseio.com/db/partners.json")
 
 /*
         for (let i = 0; i < array.length; i++) {
-          //образаюсь к элементу массива
+          //образаюсь к каждому отдельному элементу массива
           console.log(array[i]);
         }
         */
+}
+
+export default partners;

@@ -1,4 +1,5 @@
-//принимаем данные из статического JSON файла, его можно менять
+const menu = () => {
+    //принимаем данные из статического JSON файла, его можно менять
 const cardsMenu = document.quarySelector('.cards-menu');
 
 //смена данных в блоке Пицца Плюс со звездами вверху слева
@@ -73,3 +74,6 @@ changeTitle(restaurant);
 } else {
     window.location.href = '/';
 }
+}
+
+export default menu;
