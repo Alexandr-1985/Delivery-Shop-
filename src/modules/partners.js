@@ -25,6 +25,7 @@ const renderItems = (data) => {
 console.log(item.name);
 console.dir(a);
 //a.products = products;
+//св-во для работы с дата атрибутами
 a.dataset.products = products;
 //таки образом мы в дата атрибуте сохранили строчку и будем получать данные в javaJSON
 console.log(a.dataset.products);
@@ -103,4 +104,4 @@ fetch("https://go-test-shop-default-rtdb.firebaseio.com/db/partners.json")
         */
 }
 
-export default partners;
+export default partners; 
